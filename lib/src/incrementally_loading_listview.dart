@@ -189,7 +189,7 @@ class SliverIncrementallyLoadingListViewState
   final PublishSubject<bool> _loadingMoreSubject = PublishSubject<bool>();
   Stream<bool> _loadingMoreStream;
 
-  IncrementallyLoadingListViewState() {
+  SliverIncrementallyLoadingListViewState() {
     _loadingMoreStream =
         _loadingMoreSubject.switchMap((shouldLoadMore) => loadMore());
   }
